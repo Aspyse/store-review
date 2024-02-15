@@ -33,7 +33,7 @@ header {
     font-weight: normal;
     font-size: 28px;
 }
-form {
+#store-name {
     margin: 0 auto;
 }
 
@@ -53,6 +53,8 @@ aside {
     text-align: center;
     display: flex;
     flex-direction: column;
+
+    width: 15%;
 }
 
 main {

@@ -42,14 +42,22 @@ hr {
 }
 
 #content {
-    width: 100%;
-    display: inline-flex;
+    /*width: 100%;
+    display: inline-flex;*/
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 0 15px;
 }
 
 aside {
     text-align: center;
     display: flex;
     flex-direction: column;
+
+    width: 15%;
 }
 
 main {
