@@ -80,3 +80,9 @@ main {
 
     padding: 0 15px;
 }
+
+
+.pictures> img{
+        width: 150px;
+        vertical-align: middle;
+}

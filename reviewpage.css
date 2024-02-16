@@ -75,7 +75,7 @@ main {
     margin: 15px 0;
 }
 #Review {
-    width: auto;
+    width: 5px;
     max-width: auto; /* Adjust as per your requirement */
     height: auto;
     resize: vertical; /* Allow vertical resizing */
