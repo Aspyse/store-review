@@ -15,10 +15,10 @@ button, input {
     border-radius: 2px;
 }
 h1 {
-    font-size: 50px;
+    font-size: 18px;
 }
 h2 {
-    font-size: 25px;
+    font-size: 16px;
 }
 
 header {
@@ -32,9 +32,16 @@ header {
 #logo {
     font-weight: normal;
     font-size: 28px;
+
+    text-decoration: none;
+    margin: 0.67em 0;
 }
 form {
     margin: 0 auto;
+}
+#browse-label {
+    text-align: center;
+    font-size: 24px;
 }
 
 hr {
@@ -42,25 +49,15 @@ hr {
 }
 
 #content {
-    
-    display: inline-block;
+    display: flex;
+    gap: 15px;
+
+    padding: 0 15px;
 }
 
-#spacer{
-    width: 25%;
-}
-
-main {
-    width: 100%;
-}
 .post-card {
     border: 1px solid white;
     border-radius: 2px;
     padding: 15px;
     margin: 15px 0;
-}
-
-.form-group{
-    /*fix to make the boxes aligned with each other
-    */
 }

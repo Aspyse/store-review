@@ -32,6 +32,9 @@ header {
 #logo {
     font-weight: normal;
     font-size: 28px;
+    text-decoration: none;
+
+    margin: 0.67em 0;
 }
 form {
     margin: 0 auto;

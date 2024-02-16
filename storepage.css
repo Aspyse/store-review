@@ -32,9 +32,17 @@ header {
 #logo {
     font-weight: normal;
     font-size: 28px;
+    text-decoration: none;
+
+    margin: 0.67em 0;
 }
-#store-name {
+form {
     margin: 0 auto;
+}
+
+#store-name {
+    /*text-align: center;*/
+    font-size: 24px;
 }
 
 hr {
