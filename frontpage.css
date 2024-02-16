@@ -72,3 +72,11 @@ main {
     padding: 15px;
     margin: 15px 0;
 }
+
+#favoritestores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 0 15px;
+}
