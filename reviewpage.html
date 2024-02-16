@@ -27,10 +27,32 @@
                         <textarea id = "Review" name = "Review" rows = "4" cols = "auto">
                             Enter text here...
                         </textarea>
+                        <script type="text/javascript">
+                            textarea = document.querySelector("#Review");
+                            textarea.addEventListener('input', autoResize, false);
+ 
+                            function autoResize() {
+                                this.style.height = 'auto';
+                                this.style.height = this.scrollHeight + 'px';
+                            }
+                        </script>
                     </div>
                     
-                    <button>Submit</button>
-                    <button>Clear</button>
+                    <button id="clearButton">Clear</button>
+                    <button id="submitButton">Submit Review</button>
+
+                    <script>
+                        const clearButton = document.getElementById('clearButton');
+                        clearButton.addEventListener('click', () => {
+                            document.getElementById('Review').value = '';
+                        });
+
+                        const submitButton = document.getElementById('submitButton');
+                        submitButton.addEventListener('click', () => {
+                            alert('Review submitted successfully!');
+                            window.location.href = "index.html";
+                        });
+                     </script>
                 </div>
             </main>
             <aside></aside>
