@@ -5,6 +5,20 @@
         <link href="storepage.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="frontpage.js"></script>
+        <style>
+            textarea {
+                width: 100%;
+                max-width: 500px; /* Set your desired max-width */
+                height: 200px;
+                resize: vertical;
+                margin-bottom: 10px; /* Add margin to the bottom to prevent overlap */
+            }
+
+            .flex-container {
+                max-width: 600px; /* Set your desired max-width for the flex-container */
+                margin: 0 auto; 
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -23,18 +37,21 @@
                 <!-- reviews specifically about the store -->
                 <div class="post-card">
                     <div class="flex-container">
-                        <label for = "Review"></label>
-                        <textarea id = "Review" name = "Review" rows = "4" cols = "auto">
-                            Enter text here...
-                        </textarea>
+                        <label for="Review"></label>
+                        <textarea cols="50" rows="3" name="Review" placeholder="Type your review here..."></textarea>
                         <script type="text/javascript">
-                            textarea = document.querySelector("#Review");
-                            textarea.addEventListener('input', autoResize, false);
- 
-                            function autoResize() {
-                                this.style.height = 'auto';
-                                this.style.height = this.scrollHeight + 'px';
-                            }
+                            window.onload = function () {
+                                const tx = document.getElementsByTagName("textarea");
+                                for (let i = 0; i < tx.length; i++) {
+                                    tx[i].setAttribute("style", "height:" + (tx[i].scrollHeight) + "px; overflow-y:hidden;");
+                                    tx[i].addEventListener("input", OnInput, false);
+                                }
+
+                                function OnInput() {
+                                    this.style.height = 'auto';
+                                    this.style.height = (this.scrollHeight) + "px";
+                                }
+                            };
                         </script>
                     </div>
                     

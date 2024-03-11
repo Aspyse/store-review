@@ -76,9 +76,9 @@ main {
 }
 #Review {
     width: 5px;
-    max-width: auto; /* Adjust as per your requirement */
+    max-width: auto; 
     height: auto;
-    resize: vertical; /* Allow vertical resizing */
+    resize: vertical; 
 }
 
 .flex-container {
