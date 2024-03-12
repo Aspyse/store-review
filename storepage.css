@@ -6,17 +6,17 @@
     font-family: 'Space Mono', monospace;
 
     min-width: none;
-
-    /* debug */
-    /*border: magenta 1px solid;*/
 }
+
 button, input {
     border: 1px solid white;
     border-radius: 2px;
 }
+
 h1 {
     font-size: 18px;
 }
+
 h2 {
     font-size: 16px;
 }
@@ -24,24 +24,21 @@ h2 {
 header {
     display: flex;
     align-items: center;
-    /*justify-content: center;
-    gap: 37%;*/
-
     padding: 0 15px;
 }
+
 #logo {
     font-weight: normal;
     font-size: 28px;
     text-decoration: none;
-
     margin: 0.67em 0;
 }
+
 form {
     margin: 0 auto;
 }
 
 #store-name {
-    /*text-align: center;*/
     font-size: 24px;
 }
 
@@ -53,7 +50,6 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
     padding: 0 15px;
 }
 
@@ -61,16 +57,71 @@ aside {
     text-align: center;
     display: flex;
     flex-direction: column;
-
     width: 15%;
 }
 
 main {
     width: 60%;
 }
+
 .post-card {
     border: 1px solid white;
     border-radius: 2px;
     padding: 15px;
     margin: 15px 0;
+}
+
+textarea {
+    width: 100%;
+    max-width: 500px;
+    height: 100px;
+    resize: vertical;
+    margin-bottom: 10px;
+}
+
+.flex-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.star-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.star {
+    font-size: 24px;
+    cursor: pointer;
+    color: rgb(55, 55, 55);
+    transition: color 0.3s;
+}
+
+.star:hover,
+.star.active {
+    color: white;
+}
+
+.form-element {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 300px;
+    margin-right: 10px;
+}
+
+/* Media query to adjust styles based on viewport width */
+@media screen and (min-width: 601px) {
+    .flex-container {
+        margin: 0; /* Remove auto margin for centering */
+    }
 }

@@ -1,78 +1,63 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>re*curate</title>
-        <link href="storepage.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="frontpage.js"></script>
-        <style>
-            textarea {
-                width: 100%;
-                max-width: 500px; /* Set your desired max-width */
-                height: 200px;
-                resize: vertical;
-                margin-bottom: 10px; /* Add margin to the bottom to prevent overlap */
-            }
-
-            .flex-container {
-                max-width: 600px; /* Set your desired max-width for the flex-container */
-                margin: 0 auto; 
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <a href="index.html" id="logo">re*curate</a>
-            <form>
-                <input type="text" name="searchbar">
-                <input type="submit" value="Search">
-            </form>
-            <button><a href = "index.html">Home</a></button>
-        </header>
-        <hr>
-        <div id="content">
-            <aside></aside>
-            <main>
-                <h1 id="store-name">Write a Review...</h1>
-                <!-- reviews specifically about the store -->
-                <div class="post-card">
-                    <div class="flex-container">
-                        <label for="Review"></label>
-                        <textarea cols="50" rows="3" name="Review" placeholder="Type your review here..."></textarea>
-                        <script type="text/javascript">
-                            window.onload = function () {
-                                const tx = document.getElementsByTagName("textarea");
-                                for (let i = 0; i < tx.length; i++) {
-                                    tx[i].setAttribute("style", "height:" + (tx[i].scrollHeight) + "px; overflow-y:hidden;");
-                                    tx[i].addEventListener("input", OnInput, false);
-                                }
-
-                                function OnInput() {
-                                    this.style.height = 'auto';
-                                    this.style.height = (this.scrollHeight) + "px";
-                                }
-                            };
-                        </script>
+<head>
+    <title>re*curate</title>
+    <link href="storepage.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="frontpage.js"></script>
+    <script src="reviewpage.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" id="logo">re*curate</a>
+        <form>
+            <input type="text" name="searchbar">
+            <input type="submit" value="Search">
+        </form>
+        <button><a href="index.html">Home</a></button>
+    </header>
+    <hr>
+    <div id="content">
+        <aside></aside>
+        <main>
+            <h1 id="store-name">Write a Review...</h1>
+            <!-- Form inside the flex-container -->
+            <div class="post-card">
+                <div class="flex-container">
+                    <!-- Name -->
+                    <div class="form-element">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
                     </div>
                     
-                    <button id="clearButton">Clear</button>
-                    <button id="submitButton">Submit Review</button>
+                    <!-- Email -->
+                    <div class="form-element">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email">
+                    </div>
 
-                    <script>
-                        const clearButton = document.getElementById('clearButton');
-                        clearButton.addEventListener('click', () => {
-                            document.getElementById('Review').value = '';
-                        });
+                    <!-- Star rating -->
+                    <div class="form-element star-rating">
+                        <label for="star-rating">Star Rating:</label>
+                        <div class="star" data-rating="1">&#9733;</div>
+                        <div class="star" data-rating="2">&#9733;</div>
+                        <div class="star" data-rating="3">&#9733;</div>
+                        <div class="star" data-rating="4">&#9733;</div>
+                        <div class="star" data-rating="5">&#9733;</div>
+                    </div>
 
-                        const submitButton = document.getElementById('submitButton');
-                        submitButton.addEventListener('click', () => {
-                            alert('Review submitted successfully!');
-                            window.location.href = "index.html";
-                        });
-                     </script>
+                    <!-- Review textarea -->
+                    <div class="form-element">
+                        <label for="review">Review:</label>
+                        <textarea cols="50" rows="3" id="review" name="review" placeholder="Type your review here..."></textarea>
+                    </div>
                 </div>
-            </main>
-            <aside></aside>
-        </div>
-    </body>
+
+                <button id="clearButton">Clear</button>
+                <button id="submitButton">Submit</button>
+            </div>
+        </main>
+        <aside></aside>
+    </div>
+</body>
 </html>
