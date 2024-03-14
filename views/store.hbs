@@ -1,0 +1,22 @@
+<!-- To put files in each other -->
+<!-- TODO: EDIT -->
+<div>
+    {{> header}}
+    <hr>
+    <div id="content">
+        {{> favorite}}
+        <!-- MAIN HERE, use #each data -->
+        <main>
+            <h1 id="store-name">{{title}}</h1>
+            <a href="https://www.facebook.com/ThriftApparelMNL">Facebook</a>
+            <a href="https://www.instagram.com/thrift.apparelmnl/">Instagram</a>
+            {{#each post_data}}
+                <div class="post-card">
+                    <h2>{{post_user}}</h2>
+                    <h1>{{post_title}}</h1>
+                    <p>{{post_content}}</p>
+                </div>
+            {{/each}}
+        </main>
+        {{> sidebar}}
+</div>

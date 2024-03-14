@@ -1,3 +1,5 @@
+/* TAKEN FROM frontpage.css, edit as needed */
+
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 * {
@@ -83,6 +85,7 @@ main {
 
 
 .pictures> img{
-        width: 150px;
-        vertical-align: middle;
+    width: 150px;
+    vertical-align: middle;
+    border-radius: 2px;
 }

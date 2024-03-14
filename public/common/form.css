@@ -1,0 +1,73 @@
+/* TAKEN FROM registrationpage.css, edit as needed */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    background-color: hsl(0, 0%, 5%);
+    color: whitesmoke;
+    font-family: 'Space Mono', monospace;
+    min-width: none;
+}
+
+button, input {
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+#logo {
+    font-weight: normal;
+    font-size: 28px;
+}
+
+form {
+    margin: 0 auto;
+}
+
+hr {
+    border: 1px dashed white;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.post-card {
+    border: 1px solid white;
+    border-radius: 2px;
+    padding: 15px;
+    margin: 15px 0;
+    width: 50%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    width: 150px;
+    margin-right: 10px; 
+}
+
+.form-group input {
+    flex: 1;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+

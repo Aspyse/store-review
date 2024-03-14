@@ -1,0 +1,22 @@
+<!-- To put files in each other -->
+<!-- TODO: EDIT -->
+<div class="body-parent">
+    {{> header}}
+    <hr>
+    <div id="content">
+        {{> favorite}}
+        <!-- MAIN HERE, use #each data -->
+        <main>
+            {{#each post_data}}
+            <div class="post-card">
+                <a href="/store/{{post_store}}">{{post_store}}</a>
+                <h1>{{post_user}}</h1>
+                <p>{{post_content}}</p>
+                <div class="pictures">
+                    <img src="{{post_image}}"/>
+                </div>
+            </div>
+            {{/each}}
+        </main>
+        {{> sidebar}}
+</div>

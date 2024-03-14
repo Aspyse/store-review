@@ -1,0 +1,250 @@
+[{
+  "_id": {
+    "$oid": "65f24743d0a8b11a9bc1d04e"
+  },
+  "post_title": "The Best in Town!",
+  "post_user": "sneakerloverzzz",
+  "post_store": "ShoeGameManila",
+  "post_content": "I bought a pair of Nike Air Max 270 from this store and I'm very happy with them. They are comfortable, stylish, and durable. The delivery was fast and the customer service was friendly. Highly recommend this store!",
+  "post_image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/awjogtdnqxniqqk0wpgf/air-max-270-shoes-2V5C4p.png"
+},
+{
+  "_id": {
+    "$oid": "65f24839d0a8b11a9bc1d054"
+  },
+  "post_title": "Super Comfy and Quality Materials",
+  "post_user": "socmed suki",
+  "post_store": "ShoeGameManila",
+  "post_content": "This store has a great selection of Adidas sneakers at reasonable prices. I ordered a pair of Adidas Ultraboost 21 and they arrived in perfect condition. They fit well and feel amazing on my feet. I will definitely shop here again!",
+  "post_image": ""
+},
+{
+  "_id": {
+    "$oid": "65f24843d0a8b11a9bc1d055"
+  },
+  "post_title": "Affordable, will come back soon",
+  "post_user": "boss.1sh",
+  "post_store": "ShoeGameManila",
+  "post_content": "I love this store! They have the best deals on Converse sneakers. I got a pair of Converse Chuck Taylor All Star for a cheap price. They are classic, versatile, and easy to wear. The store also offers free shipping and returns, which is awesome!",
+  "post_image": ""
+},
+{
+  "_id": {
+    "$oid": "65f24881d0a8b11a9bc1d056"
+  },
+  "post_title": "BUY HERE NOW",
+  "post_user": "balancefantom",
+  "post_store": "ShoeGameManila",
+  "post_content": "If you are looking for quality New Balance sneakers, this is the place to go. I bought a pair of New Balance 574 and they are the best sneakers I ever owned. They are comfortable, supportive, and stylish. The store also has excellent customer service and fast delivery.",
+  "post_image": ""
+},
+{
+  "_id": {
+    "$oid": "65f2489dd0a8b11a9bc1d057"
+  },
+  "post_title": "I got the best Puma sneakers here",
+  "post_user": "user12084724",
+  "post_store": "ShoeGameManila",
+  "post_content": "This store is amazing! They have the latest models of Puma sneakers at affordable prices. I ordered a pair of Puma RS-X3 and they are super cool. They are colorful, trendy, and comfortable. The store also has a loyalty program and a friendly staff. I'm very satisfied with my purchase!",
+  "post_image": ""
+},
+{
+  "_id": {
+    "$oid": "65f248b9d0a8b11a9bc1d058"
+  },
+  "post_title": "Best Car Accessories and Best Service",
+  "post_user": "ilovecars2024",
+  "post_store": "SokuRacingCarAccessories",
+  "post_content": "I bought a new spoiler from this store and I’m very happy with it. It looks great on my car and it improves the aerodynamics and stability. The installation was easy and the customer service was friendly.",
+  "post_image": "https://i.ebayimg.com/images/g/VN0AAOSwzJJjqwc~/s-l1600.jpg"
+},
+{
+  "_id": {
+    "$oid": "65f24914d0a8b11a9bc1d059"
+  },
+  "post_title": "10/10",
+  "post_user": "car child",
+  "post_store": "SokuRacingCarAccessories",
+  "post_content": "This store has the best selection of racing car accessories in town. I got a set of alloy wheels and tires for a very reasonable price. They also offer free shipping and installation. Highly recommended!",
+  "post_image": ""
+},
+{
+  "_id": {
+    "$oid": "65f2493fd0a8b11a9bc1d05a"
+  },
+  "post_title": "The reviews are real!",
+  "post_user": "mari car",
+  "post_store": "SokuRacingCarAccessories",
+  "post_content": "If you are looking for quality racing car accessories, look no further than this store. They have everything you need, from steering wheels and pedals to exhaust systems and turbos. The products are durable and high-performance. The staff are knowledgeable and helpful.",
+  "post_image": ""
+},
+{
+  "_id": {
+    "$oid": "65f2495cd0a8b11a9bc1d05b"
+  },
+  "post_title": "Fast and Legit 100%",
+  "post_user": "Aut0L0ver",
+  "post_store": "SokuRacingCarAccessories",
+  "post_content": "I ordered a racing seat and a harness from this store and I'm very impressed with the product and the service. The seat is comfortable and secure, and the harness is adjustable and easy to use. The delivery was fast and the packaging was secure.",
+  "post_image": ""
+},
+{
+  "_id": {
+    "$oid": "65f24976d0a8b11a9bc1d05c"
+  },
+  "post_title": "Will shop again here",
+  "post_user": "Idol RoadWarrior",
+  "post_store": "SokuRacingCarAccessories",
+  "post_content": "This store is amazing! I found a rare racing car accessory that I was looking for for a long time. It's a custom-made dashboard with a digital display and a GPS system. The quality is superb and the price is fair. The store owner was very friendly and helpful.",
+  "post_image": ""
+},
+{
+  "_id": {
+    "$oid": "65f24990d0a8b11a9bc1d05d"
+  },
+  "post_title": "Great quality and design",
+  "post_user": "jessica24",
+  "post_store": "ThriftApparelMNL",
+  "post_content": "I ordered a custom t-shirt and tote bag with my K-pop idol and I love them! The quality is amazing and the design is exactly what I wanted. They arrived on time and the customer service was very helpful. Highly recommend!",
+  "post_image": "https://filebroker-cdn.lazada.com.ph/kf/Sb7ddc5919b0544018a3bc22ca0e2940cU.jpg"
+},
+{
+  "_id": {
+    "$oid": "65f249d6d0a8b11a9bc1d05e"
+  },
+  "post_title": "Very satisfied with my purchase",
+  "post_user": "markjon0220",
+  "post_store": "ThriftApparelMNL",
+  "post_content": "I bought a custom t-shirt and tote bag for my girlfriend's birthday and she was thrilled. The t-shirt fit her perfectly and the tote bag was spacious and sturdy. The printing was clear and vibrant. They were also very affordable and delivered fast. I would definitely buy from them again.",
+  "post_image": "https://dongsong.com.mx/wp-content/uploads/2023/11/DS_ToteBag_MockUp_JK_3D.jpg"
+},
+{
+  "_id": {
+    "$oid": "65f24a11d0a8b11a9bc1d05f"
+  },
+  "post_title": "Awesome products and service",
+  "post_user": "elisameimei_.",
+  "post_store": "ThriftApparelMNL",
+  "post_content": "I got a custom t-shirt and tote bag with my favorite band and they look awesome. The t-shirt is soft and comfortable and the tote bag is durable and practical. The products are well-made and the service is friendly and efficient. I'm very happy with my order.",
+  "post_image": ""
+},
+{
+  "_id": {
+    "$oid": "65f24a34d0a8b11a9bc1d060"
+  },
+  "post_title": "Best custom t-shirt and tote bag store ever",
+  "post_user": "davidgoli47",
+  "post_store": "ThriftApparelMNL",
+  "post_content": "I ordered a custom t-shirt and tote bag with a funny slogan and they are hilarious. The t-shirt is cozy and the tote bag is handy. The products are high-quality and the service is professional and courteous. I'm very impressed with this store and I will definitely order more.",
+  "post_image": ""
+},
+{
+  "_id": {
+    "$oid": "65f24a4fd0a8b11a9bc1d061"
+  },
+  "post_title": "Love my custom t-shirt and tote bag",
+  "post_user": "babymom_1901",
+  "post_store": "ThriftApparelMNL",
+  "post_content": "I ordered a custom t-shirt and tote bag with a cute design and they are adorable. The t-shirt is flattering and the tote bag is convenient. The products are excellent and the service is prompt and polite. I'm very pleased with this store and I will definitely recommend it to my friends.",
+  "post_image": ""
+},
+{
+  "_id": {
+    "$oid": "65f24f41d0a8b11a9bc1d062"
+  },
+  "post_title": "Crunchy and delicious",
+  "post_user": "juan23",
+  "post_store": "KangkongChips",
+  "post_content": "I love kangkong chips and this store makes them the best. They are crunchy, tasty, and healthy. They have different flavors to choose from and they are all yummy. They are also affordable and packed well. I always buy from them whenever I crave for a snack.",
+  "post_image": "https://kangkongchipsoriginal.com.ph/cdn/shop/products/CLASSIC.png?v=1679324111"
+},
+{
+  "_id": {
+    "$oid": "65f25092d0a8b11a9bc1d063"
+  },
+  "post_title": "The best kangkong chips ever",
+  "post_user": "elenajoyce1998",
+  "post_store": "KangkongChips",
+  "post_content": "I love kangkong chips and this store makes them the best. They are crunchy, tasty, and healthy. They have different flavors to choose from and they are all yummy. They are also affordable and packed well. I always buy from them whenever I crave for a snack.",
+  "post_image": ""
+},
+{
+  "_id": {
+    "$oid": "65f250bdd0a8b11a9bc1d064"
+  },
+  "post_title": "Amazing kangkong chips and service",
+  "post_user": "mang_boy18282",
+  "post_store": "KangkongChips",
+  "post_content": "I ordered kangkong chips from this store and I was very satisfied. They are the best kangkong chips I ever had. They are fresh, savory, and wholesome. They have a lot of choices to cater to your taste and they are all excellent. They are also reasonable and shipped quickly. I will definitely order more from them.",
+  "post_image": ""
+},
+{
+  "_id": {
+    "$oid": "65f250d4d0a8b11a9bc1d065"
+  },
+  "post_title": "Superb kangkong chips and store",
+  "post_user": "tropa_timelord",
+  "post_store": "KangkongChips",
+  "post_content": "I bought kangkong chips from this store and I was very impressed. They are the most delicious kangkong chips I ever tasted. They are crunchy, spicy, and healthy. They have a wide range of flavors to please your palate and they are all superb. They are also inexpensive and arrived on time. I will definitely buy more from them.",
+  "post_image": ""
+},
+{
+  "_id": {
+    "$oid": "65f250edd0a8b11a9bc1d066"
+  },
+  "post_title": "Fantastic kangkong chips and experience",
+  "post_user": "miguelito.bryce",
+  "post_store": "KangkongChips",
+  "post_content": "I got kangkong chips from this store and I was very happy. They are the finest kangkong chips I ever tried. They are crisp, tangy, and nourishing. They have a plethora of options to match your mood and they are all fantastic. They are also economical and delivered promptly. I will definitely get more from them.",
+  "post_image": ""
+},
+{
+  "_id": {
+    "$oid": "65f25150d0a8b11a9bc1d067"
+  },
+  "post_title": "Awesome laptop and accessories",
+  "post_user": "pinoy techtips kevin",
+  "post_store": "OctagonComputerSuperstore",
+  "post_content": "I bought a laptop and some accessories from this store and I'm very happy with them. The laptop is fast, sleek, and easy to use. The accessories are also high-quality and compatible with the laptop. The store also offered a good price and a warranty. I would definitely recommend this store to anyone looking for a laptop and accessories.",
+  "post_image": "https://hexus.net/media/uploaded/2021/6/b0dce0cf-fb2f-406d-a09a-a8f77f0b680e.png"
+},
+{
+  "_id": {
+    "$oid": "65f2516bd0a8b11a9bc1d068"
+  },
+  "post_title": "Very pleased with my purchase",
+  "post_user": "danica.jhoy1986",
+  "post_store": "OctagonComputerSuperstore",
+  "post_content": "I ordered a laptop and some accessories from this store and I'm very pleased with them. The laptop is powerful, stylish, and user-friendly. The accessories are also durable and useful for the laptop. The store also delivered them quickly and safely. I would definitely buy from this store again.",
+  "post_image": ""
+},
+{
+  "_id": {
+    "$oid": "65f25184d0a8b11a9bc1d069"
+  },
+  "post_title": "Great laptop and accessories and service",
+  "post_user": "mike.lawsonofc",
+  "post_store": "OctagonComputerSuperstore",
+  "post_content": "I got a laptop and some accessories from this store and I'm very impressed with them. The laptop is reliable, modern, and fun to use. The accessories are also excellent and enhance the laptop. The store also provided great service, from helping me choose the right products to setting them up for me. I would definitely shop at this store again.",
+  "post_image": ""
+},
+{
+  "_id": {
+    "$oid": "65f2519fd0a8b11a9bc1d06a"
+  },
+  "post_title": "Best PC and accessories and experience",
+  "post_user": "geek for nerd pc",
+  "post_store": "OctagonComputerSuperstore",
+  "post_content": "I purchased a PC and some accessories from this store and I'm very satisfied with them. The PC is smooth, elegant, and easy to set up. The accessories are also superb and match the PC. The store also has a great website, where I could compare different products and features. I would definitely order from this store again.",
+  "post_image": ""
+},
+{
+  "_id": {
+    "$oid": "65f251b8d0a8b11a9bc1d06b"
+  },
+  "post_title": "Amazing computer and accessories and deal",
+  "post_user": "new.oldgen0908",
+  "post_store": "OctagonComputerSuperstore",
+  "post_content": "I received a computer and some accessories from this store and I'm very happy with them. The laptop is efficient, versatile, and easy to operate. The accessories are also fantastic and complement the computer. The store also gave me a great deal, with a discount and a free gift. I would definitely recommend this store to my friends.",
+  "post_image": ""
+}]
