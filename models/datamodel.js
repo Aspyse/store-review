@@ -1,11 +1,6 @@
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1:27017/reviewdb');
 
-function errorFn(err) {
-    console.log('Error found. Please trace!');
-    console.log(err);
-}
-
 // TODO: CREATE SCHEMA
 const loginSchema = new mongoose.Schema({
     user: { type: String },
@@ -26,24 +21,30 @@ const postSchema = new mongoose.Schema({
 const postModel = mongoose.model('post', postSchema); // NOTE: becomes "posts"
 
 /* SAMPLE (take note of post_data and friend_data):
-  postModel.find(searchQuery).lean().then(function(post_data){
-	friendModel.find(searchQuery).lean().then(function(friend_data){
-      resp.render('main',{
+postModel.find(searchQuery).lean().then(function(post_data){
+    friendModel.find(searchQuery).lean().then(function(friend_data){
+    resp.render('main',{
         layout          : 'index',
         title           : 'Social Media 4 Homepage',
         'post-data'     : post_data,
         'friend-data'   : friend_data
-      });
+    });
     }).catch(errorFn);
-  }).catch(errorFn);
+}).catch(errorFn);
 */
 
-function finalClose() {
-    console.log('Close connection at the end!');
-    mongoose.connection.close();
-    process.exit();
+function init() {
+    function finalClose() {
+        console.log('Close connection at the end!');
+        mongoose.connection.close();
+        process.exit();
+    }
+
+    process.on('SIGTERM', finalClose);
+    process.on('SIGINT', finalClose);
+    process.on('SIGQUIT', finalClose);
 }
 
-process.on('SIGTERM', finalClose);
-process.on('SIGINT', finalClose);
-process.on('SIGQUIT', finalClose);
+module.exports.init = init;
+module.exports.loginModel = loginModel;
+module.exports.postModel = postModel;

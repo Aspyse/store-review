@@ -9,13 +9,14 @@
         <main>
             {{#each post_data}}
             <div class="post-card">
-                <h2>{{post_store}}</h2>
+                <a href="/store/{{post_store}}">{{post_store}}</a>
                 <h1>{{post_user}}</h1>
                 <p>{{post_content}}</p>
                 <div class="pictures">
-                    <img src={{post_image}}/>
+                    <img src="{{post_image}}"/>
                 </div>
             </div>
+            {{/each}}
         </main>
         {{> sidebar}}
 </div>

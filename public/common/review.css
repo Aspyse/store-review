@@ -1,0 +1,90 @@
+/* TAKEN FROM reviewpage.css, edit as needed */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    background-color: hsl(0, 0%, 5%);
+    color: whitesmoke;
+    font-family: 'Space Mono', monospace;
+
+    min-width: none;
+
+    /* debug */
+    /*border: magenta 1px solid;*/
+}
+button, input {
+    border: 1px solid white;
+    border-radius: 2px;
+}
+h1 {
+    font-size: 18px;
+}
+h2 {
+    font-size: 16px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    /*justify-content: center;
+    gap: 37%;*/
+
+    padding: 0 15px;
+}
+#logo {
+    font-weight: normal;
+    font-size: 28px;
+    text-decoration: none;
+
+    margin: 0.67em 0;
+}
+form {
+    margin: 0 auto;
+}
+
+#store-name {
+    /*text-align: center;*/
+    font-size: 24px;
+}
+
+hr {
+    border: 1px dashed white;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 0 15px;
+}
+
+aside {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    width: 15%;
+}
+
+main {
+    width: 60%;
+}
+.post-card {
+    border: 1px solid white;
+    border-radius: 2px;
+    padding: 15px;
+    margin: 15px 0;
+}
+#Review {
+    width: 5px;
+    max-width: auto; 
+    height: auto;
+    resize: vertical; 
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
