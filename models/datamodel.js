@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017/reviewdb');
+//mongoose.connect('mongodb://127.0.0.1:27017/reviewdb');
+mongoose.connect(process.env.DATABASE_URL);
 
 // TODO: CREATE SCHEMA
 const loginSchema = new mongoose.Schema({

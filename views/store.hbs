@@ -10,8 +10,17 @@
             <h1 id="store-name">{{title}}</h1>
             <a href="https://www.facebook.com/ThriftApparelMNL">Facebook</a>
             <a href="https://www.instagram.com/thrift.apparelmnl/">Instagram</a>
-            <button type="submit" class="btn">Add to Favorites</button>
-            <button type="submit" class="btn">Remove from Favorites</button>
+            {{#if is_fav}}
+            <form action="remove-fav" method="post">
+                <input type="hidden" name="store-name" value{{title}}>
+                <button type="submit" class="btn">Add to Favorites</button>
+            </form>
+            {{else}}
+            <form action="add-fav" method="post">
+                <input type="hidden" name="store-name" value={{title}}>
+                <button type="submit" class="btn">Add to Favorites</button>
+            </form>
+            {{/if}}
             {{#each post_data}}
                 <div class="post-card">
                     <h2>{{post_user}}</h2>

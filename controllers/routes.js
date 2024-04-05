@@ -120,13 +120,23 @@ function init(server) {
         const searchQuery = { post_store: storename };
 
         postModel.find(searchQuery).lean().then(function(post_data) {
-            resp.render('store', {
-                layout: 'index',
-                title: storename,
-                style: 'store.css',
-                post_data: post_data
-            })
-        })
+            loginModel.findOne({ user: logged_in }).lean().then(function(login_data) {
+                let is_fav = false;
+                for (let store in login_data.stores) {
+                    if (store === storename) {
+                        is_fav = true;
+                        break;
+                    }
+                }
+                resp.render('store', {
+                    layout: 'index',
+                    title: storename,
+                    style: 'store.css',
+                    post_data: post_data,
+                    is_fav: is_fav
+                })
+            }).catch(errorFn);
+        }).catch(errorFn);
     })
 }
 
