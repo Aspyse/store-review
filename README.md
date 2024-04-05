@@ -7,13 +7,13 @@ A store review webapp
 1. Set up npm project
 
 ```
-npm init
+npm init -y
 ```
 
 2. Install required modules
 
 ```
-npm i express express-handlebars body-parser mongoose
+npm i express express-handlebars body-parser mongoose bcrypt
 ```
 
 3. Connect to mongoDB at `localhost:27017`

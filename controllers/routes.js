@@ -3,6 +3,9 @@ datamodel.init();
 postModel = datamodel.postModel;
 loginModel = datamodel.loginModel;
 
+const bcrypt = require('bcrypt');
+const saltRounds = 10; // TODO: i dont know what this does. encryption seed?
+
 function errorFn(err) {
     console.log('Error found. Please trace!');
     console.log(err);
@@ -57,15 +60,17 @@ function init(server) {
 
     server.post('/create-user', function(req, resp) {
         if (req.body.pass === req.body.passconf) {
-            const loginInstance = loginModel({
-                user: req.body.user,
-                pass: req.body.pass
+            bcrypt.hash(req.body.pass, saltRounds, function(err, hash) {
+                const loginInstance = loginModel({
+                    user: req.body.user,
+                    pass: hash
+                });
+            
+                loginInstance.save().then(function(login) {
+                    console.log('User created');
+                    resp.redirect('/login');
+                }).catch(errorFn); 
             });
-        
-            loginInstance.save().then(function(login) {
-                console.log('User created');
-                resp.redirect('/login');
-            }).catch(errorFn);
         } else {
             resp.render('dialog', {
                 layout: 'index',
@@ -77,20 +82,30 @@ function init(server) {
     });
 
     server.post('/read-user', function(req, resp) {
-        const searchQuery = { user: req.body.user, pass: req.body.pass };
+        const searchQuery = { user: req.body.user };
 
         loginModel.findOne(searchQuery).then(function(login){
             console.log('Finding user');
-
             if (login != undefined && login._id != null) {
-                logged_in = req.body.user;
-                resp.redirect('/');
+                bcrypt.compare(req.body.pass, login.pass, function(err, result) {
+                    if (result) {
+                        logged_in = req.body.user; // TODO: replace with session mgmt or smt
+                        resp.redirect('/');
+                    } else {
+                        resp.render('dialog', {
+                            layout: 'index',
+                            title: 're*curate',
+                            style: 'form.css',
+                            message: 'Username and password do not match.'
+                        });
+                    } 
+                });
             } else {
                 resp.render('dialog', {
                     layout: 'index',
                     title: 're*curate',
                     style: 'form.css',
-                    message: 'Username and password do not match.'
+                    message: 'User not found.'
                 });
             }
         }).catch(errorFn);

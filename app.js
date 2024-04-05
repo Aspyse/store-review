@@ -1,5 +1,5 @@
-// npm init
-// npm i express express-handlebars body-parser mongoose
+// npm init -y
+// npm i express express-handlebars body-parser mongoose bcrypt
 
 const express = require('express');
 const server = express();
