@@ -19,13 +19,16 @@ function init(server) {
             resp.redirect('/register');
         } else {
             postModel.find({}).lean().then(function(post_data) {
-                resp.render('main', {
-                    layout: 'index',
-                    title: 're*curate',
-                    style: 'main.css',
-                    post_data: post_data
-                });
-            })
+                loginModel.findOne({ user: logged_in }).lean().then(function(login_data) {
+                    resp.render('main', {
+                        layout: 'index',
+                        title: 're*curate',
+                        style: 'main.css',
+                        post_data: post_data,
+                        favorite_stores: login_data.stores
+                    });
+                }).catch(errorFn);
+            }).catch(errorFn);
         }
     });
     server.get('/register', function(req, resp) {

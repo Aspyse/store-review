@@ -4,7 +4,8 @@ mongoose.connect('mongodb://127.0.0.1:27017/reviewdb');
 // TODO: CREATE SCHEMA
 const loginSchema = new mongoose.Schema({
     user: { type: String },
-    pass: { type: String }
+    pass: { type: String },
+    stores: { type: [String] }
 }, { versionKey: false });
 
 const loginModel = mongoose.model('login', loginSchema)
