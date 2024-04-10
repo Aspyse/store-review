@@ -12,12 +12,12 @@
             <a href="https://www.instagram.com/thrift.apparelmnl/">Instagram</a>
             {{#if is_fav}}
             <form action="remove-fav" method="post">
-                <input type="hidden" name="store-name" value{{title}}>
-                <button type="submit" class="btn">Add to Favorites</button>
+                <input type="hidden" name="storename" value={{title}}>
+                <button type="submit" class="btn">Remove from Favorites</button>
             </form>
             {{else}}
             <form action="add-fav" method="post">
-                <input type="hidden" name="store-name" value={{title}}>
+                <input type="hidden" name="storename" value={{title}}>
                 <button type="submit" class="btn">Add to Favorites</button>
             </form>
             {{/if}}

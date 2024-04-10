@@ -52,6 +52,10 @@ function init(server) {
             style: 'review.css'
         });
     });
+    server.get('/logout', function(req, resp) {
+        logged_in = "";
+        resp.redirect('/register');
+    })
     server.get('/profile', function(req, resp) {
         resp.render('profile', {
             layout: 'index',
@@ -113,6 +117,20 @@ function init(server) {
             }
         }).catch(errorFn);
     })
+    
+    server.post('/create-review', function(req, resp) {
+        const reviewInstance = postModel({
+            post_title: req.body.title,
+            post_user: logged_in,
+            post_store: req.body.storename,
+            post_content: req.body.review,
+            post_image: req.body.image
+        });
+        reviewInstance.save().then(function(review) {
+            console.log('Review created');
+            resp.redirect('/');
+        }).catch(errorFn); 
+    })
 
     // TODO: create storepages
     server.get('/store/:storename', function(req, resp) {
@@ -135,6 +153,17 @@ function init(server) {
                     post_data: post_data,
                     is_fav: is_fav
                 })
+            }).catch(errorFn);
+        }).catch(errorFn);
+    })
+    server.post('add-fav', function(req, resp) {
+        loginModel.findOne({ user : logged_in }).lean().then(function(login_data) {
+            let stores = login_data.stores;
+            stores.append(req.body.storename);
+            login_data.stores = stores;
+
+            login_data.save().then(function(result) {
+                resp.redirect('/store/'+req.body.storename);
             }).catch(errorFn);
         }).catch(errorFn);
     })
