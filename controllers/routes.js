@@ -13,13 +13,12 @@ function errorFn(err) {
 
 // TODO
 function init(server) {
-    let logged_in = "";
     server.get('/', function(req, resp) {
-        if (logged_in === "") {
+        if (req.session.logged_in == undefined) {
             resp.redirect('/register');
         } else {
             postModel.find({}).lean().then(function(post_data) {
-                loginModel.findOne({ user: logged_in }).lean().then(function(login_data) {
+                loginModel.findOne({ user: req.session.logged_in }).lean().then(function(login_data) {
                     resp.render('main', {
                         layout: 'index',
                         title: 're*curate',
@@ -53,15 +52,16 @@ function init(server) {
         });
     });
     server.get('/logout', function(req, resp) {
-        logged_in = "";
-        resp.redirect('/register');
+        req.session.destroy(function(err) {
+            resp.redirect('/register');
+        });
     })
     server.get('/profile', function(req, resp) {
         resp.render('profile', {
             layout: 'index',
             title: 'profile',
             style: 'review.css',
-            user: logged_in
+            user: req.session.logged_in
         });
     });
 
@@ -96,7 +96,7 @@ function init(server) {
             if (login != undefined && login._id != null) {
                 bcrypt.compare(req.body.pass, login.pass, function(err, result) {
                     if (result) {
-                        logged_in = req.body.user; // TODO: replace with session mgmt or smt
+                        req.session.logged_in = req.body.user; // TODO: replace with session mgmt or smt
                         resp.redirect('/');
                     } else {
                         resp.render('dialog', {
@@ -121,7 +121,7 @@ function init(server) {
     server.post('/create-review', function(req, resp) {
         const reviewInstance = postModel({
             post_title: req.body.title,
-            post_user: logged_in,
+            post_user: req.session.logged_in,
             post_store: req.body.storename,
             post_content: req.body.review,
             post_image: req.body.image
@@ -138,7 +138,7 @@ function init(server) {
         const searchQuery = { post_store: storename };
 
         postModel.find(searchQuery).lean().then(function(post_data) {
-            loginModel.findOne({ user: logged_in }).lean().then(function(login_data) {
+            loginModel.findOne({ user: req.session.logged_in }).lean().then(function(login_data) {
                 let is_fav = false;
                 for (let store in login_data.stores) {
                     if (store === storename) {
@@ -157,7 +157,7 @@ function init(server) {
         }).catch(errorFn);
     })
     server.post('add-fav', function(req, resp) {
-        loginModel.findOne({ user : logged_in }).lean().then(function(login_data) {
+        loginModel.findOne({ user : req.session.logged_in }).lean().then(function(login_data) {
             let stores = login_data.stores;
             stores.append(req.body.storename);
             login_data.stores = stores;

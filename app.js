@@ -1,5 +1,5 @@
 // npm init -y
-// npm i express express-handlebars body-parser mongoose bcrypt
+// npm i express express-handlebars body-parser mongoose bcrypt express-session connect-mongodb-session
 
 const express = require('express');
 const server = express();
