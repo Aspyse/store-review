@@ -2,20 +2,6 @@ const mongoose = require('mongoose');
 //mongoose.connect('mongodb://127.0.0.1:27017/reviewdb');
 mongoose.connect(process.env.DATABASE_URL);
 
-const session = require('express-session');
-const mongoStore = require('connect-mongodb-session')(session);
-
-server.use(session({
-    secret: 'idk bruh',
-    saveUninitialized: true,
-    resave: false,
-    store: new mongoStore({
-        uri: process.env.DATABASE_URL,
-        collection: 'mySession',
-        expires: 14*24*60*60*1000 // 14 days
-    })
-}));
-
 // TODO: CREATE SCHEMA
 const loginSchema = new mongoose.Schema({
     user: { type: String },
