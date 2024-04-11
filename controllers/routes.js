@@ -13,8 +13,22 @@ function errorFn(err) {
 
 // TODO
 function init(server) {
+    const session = require('express-session');
+    const mongoStore = require('connect-mongodb-session')(session);
+
+    server.use(session({
+        secret: 'idk bruh',
+        saveUninitialized: true,
+        resave: false,
+        store: new mongoStore({
+            uri: process.env.DATABASE_URL,
+            collection: 'mySession',
+            expires: 14*24*60*60*1000 // 14 days
+        })
+    }));
+
     server.get('/', function(req, resp) {
-        if (req.session.logged_in == null) {
+        if (req.session.logged_in == undefined) {
             resp.redirect('/register');
         } else {
             postModel.find({}).lean().then(function(post_data) {
