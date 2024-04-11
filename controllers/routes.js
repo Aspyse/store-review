@@ -14,7 +14,7 @@ function errorFn(err) {
 // TODO
 function init(server) {
     server.get('/', function(req, resp) {
-        if (typeof req.session.logged_in === 'undefined') {
+        if (req.session.logged_in == null) {
             resp.redirect('/register');
         } else {
             postModel.find({}).lean().then(function(post_data) {
