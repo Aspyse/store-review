@@ -170,10 +170,24 @@ function init(server) {
             }).catch(errorFn);
         }).catch(errorFn);
     })
-    server.post('add-fav', function(req, resp) {
+    server.post('/add-fav', function(req, resp) {
         loginModel.findOne({ user : req.session.logged_in }).lean().then(function(login_data) {
             let stores = login_data.stores;
             stores.append(req.body.storename);
+            login_data.stores = stores;
+
+            login_data.save().then(function(result) {
+                resp.redirect('/store/'+req.body.storename);
+            }).catch(errorFn);
+        }).catch(errorFn);
+    })
+    server.post('/remove-fav', function(req, resp) {
+        loginModel.findOne({ user : req.session.logged_in }).lean().then(function(login_data) {
+            let stores = login_data.stores;
+            const index = stores.indexOf(req.body.storename);
+            if (index > -1) {
+                stores.splice(index, 1);
+            }
             login_data.stores = stores;
 
             login_data.save().then(function(result) {
